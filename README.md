@@ -14,8 +14,11 @@ may be an edge case around the more general feature implementation of supporting
 
 ### Structure
 
-- `./sample-react/deno.json`: The sample JSR registry module exposing a `<Foo>` React component `.tsx` file.
-- `./sample-vite/deno.json`: Vite application that imports from `sample-react`
+- `./sample-react/deno.json`:  
+  The sample JSR registry module exposing a `<Foo>` React component `.tsx` file.
+
+- `./sample-vite/deno.json`:  
+  Vite application that imports from `sample-react`
 
 ### Run
 
