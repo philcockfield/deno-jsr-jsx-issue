@@ -3,7 +3,7 @@
 A constrained reproduction repo showing a Deno `React + Vite` application importing a `React`
 component from a package hosted on [JSR](https://jsr.io/@phil/sample-react/0.0.4/src/Foo.tsx).
 
-The error thrown demonstrates what may be, in Luca's words,
+The error thrown demonstrates what may be, in [Luca](https://github.com/lucacasonato)'s words,
 "the NPM tarball transpile [maybe] not working correctly for TSX."
 
 I say maybe, as this comment came out of a dicussion immediately after `Deno 2.2` came out and the
@@ -36,4 +36,30 @@ This will cause errors to be output into the browser's console:
 ```
 3b0776a……3b3bc6015c5772816:7 Uncaught TypeError: jsx is not a function
     at Foo (3b0776a……bc6015c5772816:7:26)
+```
+
+The sample component being imported is a minimalist example with a reference `react`:
+
+```ts
+import { useState } from "react";
+
+/** Props passed to <Foo>. */
+export type FooProps = { msg?: string };
+
+/**
+ * A sample UI component.
+ */
+export const Foo: React.FC<FooProps> = (props) => {
+  const { msg = "🐷" } = props;
+
+  const [isOver, setOver] = useState(false);
+  const over = (isOver: boolean) => () => setOver(isOver);
+
+  return (
+    <code
+      onMouseEnter={over(true)}
+      onMouseLeave={over(false)}
+    >{`sample-react/Foo: ${msg} | isOver: ${String(isOver)}`}</code>
+  );
+};
 ```
