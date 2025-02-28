@@ -1,6 +1,7 @@
 {
   "name": "@phil/sample-react",
   "version": "0.0.1",
-  "license": "MIT",
-  "exports": "./mod.ts"
+  "tasks": { "dry": "deno publish --dry-run --allow-dirty" },
+  "exports": "./src/mod.ts",
+  "license": "MIT"
 }
