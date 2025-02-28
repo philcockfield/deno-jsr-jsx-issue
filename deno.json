@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "types": ["react", "react-dom", "@types/react"],
+    "lib": ["dom", "dom.iterable", "deno.ns"],
+    "jsx": "react-jsx",
+    "jsxImportSource": "react"
+  },
+  "nodeModulesDir": "auto",
+  "workspace": ["./sample-react", "./sample-vite"],
+  "imports": {
+    "@deno/vite-plugin": "npm:@deno/vite-plugin@1.0.0",
+    "@types/react": "npm:@types/react@18.3.12",
+    "@vitejs/plugin-react-swc": "npm:@vitejs/plugin-react-swc@3.8.0",
+    "react": "npm:react@18.3.1",
+    "react-dom": "npm:react-dom@18.3.1",
+    "vite": "npm:vite@6.2.0"
+  }
+}
