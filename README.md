@@ -1,6 +1,10 @@
-# JSX - "NPM tarball transpile [possibly] not working correctly for TSX"
+# JSX: NPM tarball transpile froon TSX
+
+### Problem: "NPM tarball transpile [possibly] not working correctly for TSX"
 
 - issue: https://github.com/jsr-io/jsr/issues/996
+
+<p>&nbsp;</p>
 
 A reproduction showing a Deno `Vite + React` application importing a `React/JSX`
 component from a `.tsx` file published as a package on [JSR](https://jsr.io/@phil/sample-react/0.0.5/src/Foo.tsx).
@@ -9,14 +13,18 @@ The error thrown demonstrates what may be, in [Luca](https://github.com/lucacaso
 
 > > "the NPM tarball transpile [maybe] not working correctly for TSX."
 
+<p>&nbsp;</p>
+
 ### Context
 
-I say "maybe", as this comment came out of a dicussion immediately after `Deno 2.2` came out and the
+This comment came out of a dicussion immediately after `Deno 2.2` came out and the
 `unsupported-jsx-tsx` warning had been lifted during JSX publishing. The theory was that this
 may be an edge-case around the more general feature implementation of JSX being robustly supported
 now.
 
-### Sample Structure
+<p>&nbsp;</p>
+
+### Sample Project Structure
 
 - Deno Project: `./sample-react/`
 
