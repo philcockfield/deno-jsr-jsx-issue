@@ -55,24 +55,31 @@ now robustly supported by Deno.
 
 To recreate the error in a web-browser on the locally running Vite `dev` server:
 
-```bash
-cd ./sample-vite
+```
+gh repo clone philcockfield/deno-jsr-jsx-issue
+cd ./deno-jsr-jsx-issue/sample-vite
 deno task install  # NB: runs `deno install` with --allow-scripts to ensure the Vite plugins fully install.
 deno task dev
 ```
 
 The server will start and render the `<App>` component that in turn imports from JSR:
 
+[<img width="1227" alt="Image" src="https://github.com/user-attachments/assets/0d6a872e-d83e-4b3f-bf30-ecc14a5ff836" />](https://jsr.io/@phil/sample-react)
+
 ```ts
 import { Foo } from "jsr:@phil/sample-react";
 ```
 
-This will cause errors to be output into the browser's console:
+[<img width="1081" alt="Image" src="https://github.com/user-attachments/assets/83487455-6c82-43ba-aaa1-2e2790de9830" />](https://github.com/philcockfield/deno-jsr-jsx-issue)
 
 ```
-3b0776a……3b3bc6015c5772816:7 Uncaught TypeError: jsx is not a function
-    at Foo (3b0776a……bc6015c5772816:7:26)
+Uncaught TypeError: jsx is not a function
+    at Foo (3b0776a9ba7e06247b86872206782c780652c681df9eb853b3bc6015c5772816:7:26)
 ```
+
+
+----
+
 
 The sample component being imported is a minimalist example with a reference `react`:
 
