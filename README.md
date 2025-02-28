@@ -18,9 +18,15 @@ The error thrown demonstrates what may be, in [Luca](https://github.com/lucacaso
 ### Context
 
 This comment came out of a dicussion immediately after `Deno 2.2` came out and the
-`unsupported-jsx-tsx` warning had been lifted during JSX publishing. The speculation was that this
-may be an `.tsx` file edge-case around the more general feature implementation of JSX now
-robustly supported by Deno.
+`unsupported-jsx-tsx` warning had been lifted during JSX publishing.
+
+```bash
+deno publish --dry-run
+```
+
+The speculation was that this
+may be an edge-case issue with `.tsx` files within the more general feature implementation of JSX
+now robustly supported by Deno.
 
 <p>&nbsp;</p>
 
