@@ -1,6 +1,6 @@
 # Sample
 
-Sample module exposing `JSX` (React) components for import externally by another sample module.  
+Sample module exposing `JSX` (React) components for import externally by another sample module.
 See issue: [github.com / jsr-io: 996](https://github.com/jsr-io/jsr/issues/996)
 
 ### Example
@@ -10,3 +10,5 @@ import { Foo } from "@phil/sample-react";
 
 const el = <Foo msg={"👋 hello"} />;
 ```
+
+### MIT
