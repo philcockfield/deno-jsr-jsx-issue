@@ -1,4 +1,7 @@
 {
+  "tasks": {
+    "clean": "deno run -A ./-scripts/-clean.ts"
+  },
   "compilerOptions": {
     "types": ["react", "react-dom", "@types/react"],
     "lib": ["dom", "dom.iterable", "deno.ns"],
@@ -8,6 +11,7 @@
   "nodeModulesDir": "auto",
   "workspace": ["./sample-react", "./sample-vite"],
   "imports": {
+    "@sys/fs": "jsr:@sys/fs@0.0.80",
     "@deno/vite-plugin": "npm:@deno/vite-plugin@1.0.0",
     "@types/react": "npm:@types/react@18.3.12",
     "@vitejs/plugin-react-swc": "npm:@vitejs/plugin-react-swc@3.8.0",
