@@ -1,4 +1,4 @@
-# JSX: NPM tarball transpile froon TSX
+# JSX: NPM tarball transpile from TSX
 
 ### Problem: "NPM tarball transpile [possibly] not working correctly for TSX"
 
