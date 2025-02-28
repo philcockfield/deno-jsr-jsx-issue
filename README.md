@@ -1,24 +1,30 @@
 # JSX - "NPM tarball transpile [possibly] not working correctly for TSX"
 
-https://github.com/jsr-io/jsr/issues/996
+- issue: https://github.com/jsr-io/jsr/issues/996
 
 A constrained reproduction repo showing a Deno `React + Vite` application importing a `React`
 component from a package hosted on [JSR](https://jsr.io/@phil/sample-react/0.0.4/src/Foo.tsx).
 
 The error thrown demonstrates what may be, in [Luca](https://github.com/lucacasonato)'s words,
-"the NPM tarball transpile [maybe] not working correctly for TSX."
+"the NPM tarball transpile [maybe] not working correctly for TSX." (?)
+
+### Context
 
 I say maybe, as this comment came out of a dicussion immediately after `Deno 2.2` came out and the
 `unsupported-jsx-tsx` warning had been lifted during JSX publishing. The theory was that this
 may be an edge case around the more general feature implementation of supporting JSX natively.
 
-### Structure
+### Sample Structure
 
-- `./sample-react/deno.json`:  
-  The sample JSR registry module exposing a `<Foo>` React component `.tsx` file.
+- `./sample-react`:  
+  The sample module exposing a `<Foo>` react component in a `.tsx` file, published to JSR.  
+  Sample registry entry: [jsr.io/@phil/sample-react](https://jsr.io/@phil/sample-react)
 
-- `./sample-vite/deno.json`:  
+- `./sample-vite`:  
   Vite application that imports from `sample-react`
+  ```bash
+  deno task dev
+  ```
 
 ### Run
 
