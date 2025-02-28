@@ -1,4 +1,6 @@
-# Issue Sample
+# JSX - "NPM tarball transpile [possibly] not working correctly for TSX"
+
+https://github.com/jsr-io/jsr/issues/996
 
 A constrained reproduction repo showing a Deno `React + Vite` application importing a `React`
 component from a package hosted on [JSR](https://jsr.io/@phil/sample-react/0.0.4/src/Foo.tsx).
