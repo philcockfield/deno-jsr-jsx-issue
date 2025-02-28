@@ -7,7 +7,7 @@
 <p>&nbsp;</p>
 
 A reproduction showing a Deno `Vite + React` application importing a `React/JSX`
-component from a `.tsx` file published as a package on [JSR](https://jsr.io/@phil/sample-react/0.0.6/src/Foo.tsx).
+component from a `.tsx` file published as a package on [JSR](https://jsr.io/@phil/sample-react/0.0.7/src/Foo.tsx).
 
 The error thrown demonstrates what may be, in [Luca](https://github.com/lucacasonato)'s words:
 

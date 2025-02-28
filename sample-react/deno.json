@@ -1,6 +1,6 @@
 {
   "name": "@phil/sample-react",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "tasks": {
     "dry": "deno publish --dry-run --allow-dirty",
     "publish": "deno publish --allow-dirty"
