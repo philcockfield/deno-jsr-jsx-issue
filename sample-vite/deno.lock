@@ -1,6 +1,7 @@
 {
   "version": "4",
   "specifiers": {
+    "jsr:@phil/sample-react@*": "0.0.4",
     "npm:@deno/vite-plugin@1.0.0": "1.0.0_vite@5.4.14__@types+node@22.12.0_@types+node@22.12.0",
     "npm:@types/node@*": "22.12.0",
     "npm:@types/react@18.3.12": "18.3.12",
@@ -10,6 +11,14 @@
     "npm:react@18.3.1": "18.3.1",
     "npm:vite@*": "6.2.0_@types+node@22.12.0",
     "npm:vite@6.2.0": "6.2.0_@types+node@22.12.0"
+  },
+  "jsr": {
+    "@phil/sample-react@0.0.4": {
+      "integrity": "b8dc554b995a3dbd2a2bdfa7e52c1682d21b55eee500f868ed5a8ccda83f5f3f",
+      "dependencies": [
+        "npm:react"
+      ]
+    }
   },
   "npm": {
     "@deno/vite-plugin@1.0.0_vite@5.4.14__@types+node@22.12.0_@types+node@22.12.0": {
