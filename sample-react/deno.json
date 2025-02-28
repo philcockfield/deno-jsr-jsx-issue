@@ -1,7 +1,21 @@
 {
   "name": "@phil/sample-react",
-  "version": "0.0.3",
-  "tasks": { "dry": "deno publish --dry-run --allow-dirty" },
+  "version": "0.0.4",
+  "tasks": {
+    "dry": "deno publish --dry-run --allow-dirty"
+  },
+  "compilerOptions": {
+    "types": ["@types/react"],
+    "lib": ["dom", "dom.iterable", "deno.ns"],
+    "jsx": "react-jsx",
+    "jsxImportSource": "react"
+  },
   "exports": "./src/mod.ts",
+  "imports": {
+    "@types/react": "npm:@types/react@18.3.12",
+    "@types/react-dom": "npm:@types/react@18.3.5",
+    "react": "npm:react@18.3.1",
+    "react-dom": "npm:react-dom@18.3.1"
+  },
   "license": "MIT"
 }
