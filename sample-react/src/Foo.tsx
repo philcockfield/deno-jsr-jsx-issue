@@ -1,6 +1,11 @@
 import { useState } from "react";
 
+/** Props passed to <Foo>. */
 export type FooProps = { msg?: string };
+
+/**
+ * A sample UI component.
+ */
 export const Foo: React.FC<FooProps> = (props) => {
   const { msg = "🐷" } = props;
 
