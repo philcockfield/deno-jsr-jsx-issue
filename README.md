@@ -2,33 +2,44 @@
 
 - issue: https://github.com/jsr-io/jsr/issues/996
 
-A constrained reproduction repo showing a Deno `React + Vite` application importing a `React`
-component from a package hosted on [JSR](https://jsr.io/@phil/sample-react/0.0.4/src/Foo.tsx).
+A reproduction showing a Deno `Vite + React` application importing a `React/JSX`
+component from a `.tsx` file published as a package on [JSR](https://jsr.io/@phil/sample-react/0.0.5/src/Foo.tsx).
 
-The error thrown demonstrates what may be, in [Luca](https://github.com/lucacasonato)'s words,
-"the NPM tarball transpile [maybe] not working correctly for TSX." (?)
+The error thrown demonstrates what may be, in [Luca](https://github.com/lucacasonato)'s words:
+
+> > "the NPM tarball transpile [maybe] not working correctly for TSX."
 
 ### Context
 
-I say maybe, as this comment came out of a dicussion immediately after `Deno 2.2` came out and the
+I say "maybe", as this comment came out of a dicussion immediately after `Deno 2.2` came out and the
 `unsupported-jsx-tsx` warning had been lifted during JSX publishing. The theory was that this
-may be an edge case around the more general feature implementation of supporting JSX natively.
+may be an edge-case around the more general feature implementation of JSX being robustly supported
+now.
 
 ### Sample Structure
 
-- `./sample-react`:  
+- Deno Project: `./sample-react/`
+
+  _UI Module (JSR)_  
   The sample module exposing a `<Foo>` react component in a `.tsx` file, published to JSR.  
   Sample registry entry: [jsr.io/@phil/sample-react](https://jsr.io/@phil/sample-react)
 
-- `./sample-vite`:  
-  Vite application that imports from `sample-react`
+  ```ts
+  import { Foo } from "jsr:@phil/sample-react";
+  ```
+
+- Deno Project: `./sample-vite/`
+
+  _Usage Scenario_  
+  The vite application that imports from `sample-react`
+
   ```bash
   deno task dev
   ```
 
 ### Run
 
-To recreate the error start the Vite server:
+To recreate the error in a web-browser on the locally running Vite `dev` server:
 
 ```bash
 cd ./sample-vite
