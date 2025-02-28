@@ -51,7 +51,7 @@ To recreate the error in a web-browser on the locally running Vite `dev` server:
 
 ```bash
 cd ./sample-vite
-deno task install  # runs `deno install` with --allow-scripts to ensure the Vite plugins fully install.
+deno task install  # NB: runs `deno install` with --allow-scripts to ensure the Vite plugins fully install.
 deno task dev
 ```
 
