@@ -2,7 +2,7 @@
 
 Sample module exposing `JSX` (React) components for import externally by another sample module.
 
-# Example
+### Example
 
 ```tsx
 import { Foo } from "@phil/sample-react";
