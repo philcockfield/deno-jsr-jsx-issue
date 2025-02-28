@@ -11,7 +11,7 @@ component from a `.tsx` file published as a package on [JSR](https://jsr.io/@phi
 
 The error thrown demonstrates what may be, in [Luca](https://github.com/lucacasonato)'s words:
 
-> > "the NPM tarball transpile [maybe] not working correctly for TSX."
+> > "the NPM tarball transpile [maybe] not working correctly for TSX." -- @luca
 
 <p>&nbsp;</p>
 
